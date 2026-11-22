@@ -6,23 +6,24 @@
 <title>Chibi Ghost Maze</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
-*{box-sizing:border-box;margin:0;padding:0;user-select:none;-webkit-user-select:none;touch-action:none}
-html,body{width:100%;height:100dvh;max-height:100dvh;overflow:hidden;background:#060b19;color:#f8fafc;font-family:system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:6px 8px}
+*{box-sizing:border-box;margin:0;padding:0;user-select:none;-webkit-user-select:none}
+html,body{width:100%;height:100dvh;max-height:100dvh;overflow:hidden;background:#060b19;color:#f8fafc;font-family:system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:6px 8px;touch-action:none}
+button{touch-action:manipulation;cursor:pointer}
 .hud{width:100%;max-width:500px;display:flex;flex-direction:column;gap:5px;flex-shrink:0}
 .bar{display:flex;align-items:center;justify-content:space-between;background:#0f172a;border:1.5px solid #1e293b;border-radius:99px;padding:4px 12px;font-weight:700;font-size:.88rem}
-.ibtn{background:#1e293b;border:1px solid #334155;color:#fff;border-radius:50%;width:26px;height:26px;cursor:pointer;font-size:.8rem}
+.ibtn{background:#1e293b;border:1px solid #334155;color:#fff;border-radius:50%;width:28px;height:28px;font-size:.82rem}
 .pwrs{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
-.pbtn{background:#0f172a;border:1.5px solid #1e293b;color:#94a3b8;border-radius:99px;padding:4px;font-size:.7rem;font-weight:700;text-align:center;cursor:pointer}
+.pbtn{background:#0f172a;border:1.5px solid #1e293b;color:#94a3b8;border-radius:99px;padding:5px 4px;font-size:.7rem;font-weight:700;text-align:center}
 .pbtn.ready{border-color:#38bdf8;color:#fff;background:#172554}
 .pbtn.active{border-color:#22c55e;background:#14532d;color:#bbf7d0}
 #arena{flex:1;width:100%;max-width:500px;display:flex;align-items:center;justify-content:center;overflow:hidden}
 canvas{display:block;border-radius:10px;box-shadow:0 0 18px rgba(6,182,212,.2);background:#070d1f}
 .hint{font-size:.68rem;color:#64748b;text-align:center;flex-shrink:0}
-.ov{position:fixed;inset:0;background:rgba(6,11,25,.9);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:50;padding:20px;text-align:center}
+.ov{position:fixed;inset:0;background:rgba(6,11,25,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:50;padding:20px;text-align:center}
 .ov.hide{display:none}
 .ov h1{font-size:1.7rem;color:#38bdf8;margin-bottom:8px}
 .ov p{color:#cbd5e1;font-size:.9rem;margin-bottom:16px;max-width:300px}
-.sbtn{background:#38bdf8;color:#060b19;border:none;padding:11px 26px;border-radius:99px;font-size:.95rem;font-weight:800;cursor:pointer}
+.sbtn{background:#38bdf8;color:#060b19;border:none;padding:12px 28px;border-radius:99px;font-size:1rem;font-weight:800}
 </style>
 </head>
 <body>
